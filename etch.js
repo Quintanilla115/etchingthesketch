@@ -1,9 +1,18 @@
-let grid = document.querySelector('.grid');
-grid.computedStyleMap.gridTemplateColumns = 'repeat(16, 1fr)';
-grid.computedStyleMap.gridTemplateRows = 'repeat(16, 1fr)';
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded');
+    createBoard(32);});
 
-for (let i = 0; i < 256; i++) {
-  let square  = document.createElement('div');
-  square.style.backgroundColor = 'red';
-  grid.insertAdjacentElement('beforeend', square);
+function createBoard(size){
+    let board = document.getElementById('grid');
+
+    board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    let numDivs = size * size;
+    for(let i = 0; i < numDivs; i++){
+        let div = document.createElement('div');
+        div.style.backgroundColor = 'yellow';
+        board.insertAdjacentElement('beforeend', div);
+        board.appendChild(div);
+    }
 }
