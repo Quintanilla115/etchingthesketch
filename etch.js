@@ -1,21 +1,9 @@
-// this is the box
-//const div = document.createElement('div');
+let grid = document.querySelector('.grid');
+grid.computedStyleMap.gridTemplateColumns = 'repeat(16, 1fr)';
+grid.computedStyleMap.gridTemplateRows = 'repeat(16, 1fr)';
 
-//div.style.width = '16px';
-//div.style.height = '16px';
-//div.style.backgroundColor = 'red';
-//document.body.appendChild(div);
-
-
-// box stuff ^^^
-// creating the grid
-
-function createGrid(gridSize) {
-    for (let i = 0; i < gridSize; i++) {
-        for (let j = 0; j < gridSize; j++) {
-            
-           
-        }
-    }
+for (let i = 0; i < 256; i++) {
+  let square  = document.createElement('div');
+  square.style.backgroundColor = 'white';
+  grid.insertAdjacentElement('beforeend', square);
 }
-

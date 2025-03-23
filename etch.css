@@ -39,5 +39,5 @@ body{
 .grid{
     height: 400px;
     width: 400px;
-    background-color: lightgreen;
+    display: grid;
 }
