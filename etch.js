@@ -1,14 +1,16 @@
+const Default_Color = 'Black'
+const Default_Size = '16'
+
+let CurrentColor = Default_Color
+let CurrentSize = Default_Size
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    createBoard(16)
-
-    let btn_popup = document.querySelector("#popup");
-    btn_popup.addEventListener("click", function() {
-        let size = getSize();
-        createBoard(size);
-    });
-
-
+    createBoard(CurrentSize)
 });
+
 
 function createBoard(size){
     
@@ -40,6 +42,5 @@ function getSize(){
     return input;
 
 }
-
 
 
